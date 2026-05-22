@@ -1,1 +1,458 @@
-index.html
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VELORA BET</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#070b14;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top left,#00ffb31a,transparent 25%),
+radial-gradient(circle at bottom right,#0066ff22,transparent 30%),
+#070b14;
+z-index:-1;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 8%;
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+background:rgba(7,11,20,0.7);
+border-bottom:1px solid rgba(255,255,255,0.05);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+letter-spacing:1px;
+background:linear-gradient(90deg,#00ffb3,#00c3ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav-btn{
+background:linear-gradient(90deg,#00ffb3,#00c3ff);
+padding:14px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:700;
+color:#07111f;
+transition:0.3s;
+box-shadow:0 0 25px rgba(0,255,179,0.25);
+}
+
+.nav-btn:hover{
+transform:translateY(-2px) scale(1.03);
+}
+
+/* HERO */
+
+.hero{
+padding:90px 8% 50px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border:1px solid rgba(0,255,179,0.25);
+border-radius:999px;
+color:#00ffb3;
+margin-bottom:25px;
+background:rgba(0,255,179,0.05);
+font-size:14px;
+}
+
+.hero h1{
+font-size:68px;
+line-height:1.05;
+margin-bottom:25px;
+font-weight:800;
+}
+
+.gradient{
+background:linear-gradient(90deg,#00ffb3,#00c3ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+color:#a5b4c7;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.main-btn{
+background:linear-gradient(90deg,#00ffb3,#00c3ff);
+padding:18px 35px;
+border-radius:16px;
+font-weight:800;
+text-decoration:none;
+color:#07111f;
+font-size:17px;
+box-shadow:0 0 35px rgba(0,255,179,0.3);
+transition:0.3s;
+}
+
+.main-btn:hover{
+transform:translateY(-3px);
+}
+
+.second-btn{
+padding:18px 35px;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+border:1px solid rgba(255,255,255,0.08);
+color:white;
+background:rgba(255,255,255,0.03);
+}
+
+/* CARD */
+
+.hero-card{
+background:linear-gradient(180deg,#111827,#0d1320);
+padding:35px;
+border-radius:30px;
+width:360px;
+border:1px solid rgba(255,255,255,0.06);
+box-shadow:0 0 60px rgba(0,0,0,0.4);
+}
+
+.live{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:25px;
+}
+
+.dot{
+width:10px;
+height:10px;
+background:#00ff88;
+border-radius:50%;
+box-shadow:0 0 12px #00ff88;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1;}
+50%{opacity:0.4;}
+100%{opacity:1;}
+}
+
+.balance{
+font-size:42px;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.small{
+color:#9ca3af;
+margin-bottom:25px;
+}
+
+.mini-box{
+background:#0b1220;
+padding:18px;
+border-radius:18px;
+margin-bottom:15px;
+border:1px solid rgba(255,255,255,0.04);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.green{
+color:#00ffb3;
+font-weight:700;
+}
+
+/* GAMES */
+
+.section{
+padding:70px 8%;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:40px;
+font-weight:800;
+}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.game{
+background:linear-gradient(180deg,#101826,#0b1220);
+border-radius:28px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.35s;
+}
+
+.game:hover{
+transform:translateY(-6px);
+box-shadow:0 0 35px rgba(0,255,179,0.15);
+}
+
+.game img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.game-content{
+padding:22px;
+}
+
+.game h3{
+margin-bottom:10px;
+font-size:24px;
+}
+
+.game p{
+color:#9ca3af;
+line-height:1.5;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.stat{
+background:#0d1320;
+padding:30px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.stat h2{
+font-size:42px;
+margin-bottom:10px;
+background:linear-gradient(90deg,#00ffb3,#00c3ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+color:#7c8799;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:40px;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:48px;
+}
+
+.hero{
+padding-top:50px;
+}
+
+.hero-card{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+
+<div class="logo">VELORA</div>
+
+<a href="#" class="nav-btn">
+Înregistrează-te
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<div class="badge">
+PLATFORMĂ PREMIUM • LIVE 24/7
+</div>
+
+<h1>
+Câștiguri rapide într-o experiență
+<span class="gradient">ultra premium</span>
+</h1>
+
+<p>
+Descoperă cele mai populare jocuri live, bonusuri exclusive și o platformă creată pentru o experiență modernă și rapidă.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="main-btn">
+Primește Bonus
+</a>
+
+<a href="#" class="second-btn">
+Vezi Jocurile
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<div class="live">
+<div class="dot"></div>
+<span>Online acum: 12.482 jucători</span>
+</div>
+
+<div class="balance">
++4.250 RON
+</div>
+
+<div class="small">
+Ultimul câștig major înregistrat
+</div>
+
+<div class="mini-box">
+<span>Crash</span>
+<span class="green">+1.250 RON</span>
+</div>
+
+<div class="mini-box">
+<span>Live Roulette</span>
+<span class="green">+870 RON</span>
+</div>
+
+<div class="mini-box">
+<span>Slots</span>
+<span class="green">+2.130 RON</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Jocuri populare
+</h2>
+
+<div class="games">
+
+<div class="game">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+<div class="game-content">
+<h3>Crash</h3>
+<p>Gameplay rapid și adrenalină maximă în fiecare rundă.</p>
+</div>
+</div>
+
+<div class="game">
+<img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1200&auto=format&fit=crop">
+<div class="game-content">
+<h3>Slots</h3>
+<p>Rotiri premium și jackpot-uri uriașe disponibile nonstop.</p>
+</div>
+</div>
+
+<div class="game">
+<img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1200&auto=format&fit=crop">
+<div class="game-content">
+<h3>Live Casino</h3>
+<p>Experiență realistă cu dealeri live și atmosferă exclusivistă.</p>
+</div>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Suport activ permanent</p>
+</div>
+
+<div class="stat">
+<h2>100K+</h2>
+<p>Utilizatori activi lunar</p>
+</div>
+
+<div class="stat">
+<h2>Instant</h2>
+<p>Procesare rapidă</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 VELORA • Toate drepturile rezervate
+</footer>
+
+</body>
+</html>
